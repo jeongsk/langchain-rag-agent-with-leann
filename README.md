@@ -29,10 +29,10 @@ LangChain과 LangGraph 공식 문서를 기반으로 질문에 답변하는 RAG 
 
 ```bash
 # 의존성 설치
-pip install -e .
+uv sync
 
 # 앱 실행
-streamlit run app.py
+uv run streamlit run app.py
 ```
 
 ## 지원하는 주제
