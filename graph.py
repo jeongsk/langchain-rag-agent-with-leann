@@ -13,7 +13,6 @@ from langchain.agents.middleware import (
 from langchain.chat_models import init_chat_model
 from langchain.tools import tool
 from langchain_core.prompts import load_prompt
-from langgraph.checkpoint.memory import InMemorySaver
 from leann import LeannSearcher
 
 load_dotenv(".env")
@@ -48,11 +47,12 @@ def search(query: str, top_k=5):
 
 
 # RAG Chat Agent
+# Note: When using LangGraph API, checkpointer is handled automatically by the platform
+# and should not be specified here. The platform uses PostgreSQL for persistence.
 agent = create_agent(
     model,
     tools=[search],
     system_prompt=system_prompt,
-    checkpointer=InMemorySaver(),
     middleware=[
         SummarizationMiddleware(
             model=model,
