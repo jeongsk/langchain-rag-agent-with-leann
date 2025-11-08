@@ -99,3 +99,7 @@ pnpm dev
 - `LANGSMITH_PROJECT`: LangSmith 프로젝트 이름
 
 자세한 내용은 [DOCKER_SETUP.md](./DOCKER_SETUP.md)를 참조하세요.
+
+## 라이선스
+
+이 프로젝트는 MIT License 하에 배포됩니다. 자세한 내용은 [LICENSE](./LICENSE) 파일을 참조하세요.
